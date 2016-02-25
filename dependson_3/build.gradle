@@ -1,0 +1,23 @@
+task task1 {
+  println("task1")
+}
+
+task task2 {
+  println('task2')
+  println('you should see task 1 first followed by task2')
+  println('now let\'s use dependsOn to reverse this order!')
+}
+
+task task3 {
+  doFirst{
+    task2
+  }
+  doFirst{
+    task1
+  }
+ 
+}
+
+
+
+
